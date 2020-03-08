@@ -1,0 +1,28 @@
+@import url(//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#left-menu {
+  width: 80px;
+  padding: 20px;
+  height: 100vh;
+  border-right: 2px solid gray;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 1vh auto;
+  width: 90%;
+  max-width: 90%;
+  height: 80vh;
+  border: 1px solid black;
+}
+
