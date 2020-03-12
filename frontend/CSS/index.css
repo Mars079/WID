@@ -10,18 +10,34 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: rgb(51, 10, 185);
+}
+
+::-webkit-scrollbar-track-piece{
+  background: rgb(57, 38, 66)
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(109, 3, 109);
+  border-radius: 20px;
+}
+
+
+
 nav {
     position: fixed;
     z-index: 10;
     box-shadow: 3px 0px 3px black;
-    background-color: #3c3c4b;
-    max-width: 100px;
-    width: auto;
+    background-color: #39394c;
+    width: 60px;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
+    justify-content: left;
+    transition: all 0.5s;
 }
 
 ul {
@@ -34,15 +50,15 @@ ul {
 
 ul li {
   font-family: 'Lato', sans-serif;
-  font-size: 1.8em;
   font-weight: bold;
 }
 
 ul li a {
   display: block;
+  margin: 20px;
   color: rgba(22, 21, 21, 0.81);
-  padding: 20px;
   text-decoration: none;
+  font-size: 1.8em;
 }
 
 ul li a:hover {
@@ -55,7 +71,7 @@ main {
   width: 100%;
   min-height: 100vh;
   height: auto;
-  background-color: rgb(46, 44, 56);
+  background-color: rgb(42, 39, 54);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -91,7 +107,7 @@ section {
   width: 200px;
   height: 300px;
   border: 1.3px solid black;
-  background-color: rgb(46, 44, 56);
+  background-color:rgb(50, 48, 62);
   transition: all 0.8s;
 }
 
@@ -99,4 +115,10 @@ section {
   transform: scale(1.04);
   box-shadow: 0px 0px 3px 2px black;
 }
+
+nav:hover{
+  width: 10vw;
+}
+
+
 
