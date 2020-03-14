@@ -1,5 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 
+:root{
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,88 +15,87 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
   width: 5px;
 }
-::-webkit-scrollbar-track{
+
+body::-webkit-scrollbar-track{
   background: rgb(51, 10, 185);
 }
 
-::-webkit-scrollbar-track-piece{
+body::-webkit-scrollbar-track-piece{
   background: rgb(57, 38, 66)
 }
 
-::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
   background: rgb(109, 3, 109);
   border-radius: 20px;
 }
 
-
-
-nav {
+#navbar {
     position: fixed;
-    z-index: 10;
-    box-shadow: 3px 0px 3px black;
-    background-color: #39394c;
-    width: 60px;
+    width: 5rem;
     height: 100vh;
-    display: flex;
-    justify-content: left;
+    box-shadow: 3px 0px 3px black;
+    background-color: rgb(68, 68, 93);
     transition: all 0.5s;
 }
 
-ul {
+#navbar-ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
   transition: all 1s;
+  height: 100%;
 }
 
-ul li {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
+.nav-list {
+  padding: 10px;
+  width: 100%;
+  font-size: 3rem;
 }
 
-ul li a {
-  display: block;
-  margin: 20px;
+.nav-list:hover{
+  background-color: #333349;
+}
+
+.nav-list:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
   color: rgba(22, 21, 21, 0.81);
   text-decoration: none;
-  font-size: 1.8em;
 }
 
-ul li a:hover {
-  background-color: rgba(32, 25, 25, 0.253);
+.nav-text {
+  display: none;
+  margin-left: 10px;
+  font-size: 1.5rem;
 }
 
-main {
+section{
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100vh;
   height: auto;
-  background-color: rgb(42, 39, 54);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-section {
-  margin-left: 25vw;
-  margin-right: 25vw;
-  height: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: rgb(57, 57, 76);
 }
 
 #container {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+}
+
+#notes-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  max-width: 880px;
+  margin-left: 25vw;
+  margin-right: 24vw;
+  padding: 10px;
+  width: auto;
 }
 
 .notebook {
@@ -107,7 +111,7 @@ section {
   width: 200px;
   height: 300px;
   border: 1.3px solid black;
-  background-color:rgb(50, 48, 62);
+  background-color:rgb(67, 67, 89);
   transition: all 0.8s;
 }
 
@@ -116,8 +120,12 @@ section {
   box-shadow: 0px 0px 3px 2px black;
 }
 
-nav:hover{
-  width: 10vw;
+#navbar:hover{
+  width: 15rem;
+}
+
+.nav-link:hover .nav-text {
+  display: block;
 }
 
 
