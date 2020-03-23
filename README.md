@@ -1,1 +1,1 @@
-Basic UI notes taking LAYOUT.
+Basic UI app layout. 

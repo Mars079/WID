@@ -13,6 +13,8 @@
   box-sizing: border-box;
 }
 
+/* Personalized navbar on chrome */
+
 body {
   overflow-x: hidden;
 }
@@ -32,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 
 #navbar {
     position: fixed;
-    z-index: 5;
+    z-index: 2;
     width: 5rem;
     height: 100vh;
     box-shadow: 3px 0px 3px black;
@@ -49,7 +51,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: aliceblue;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: var(--font_size, 1.5rem);
 }
 
 #navbar-ul {
@@ -91,7 +93,7 @@ body::-webkit-scrollbar-thumb {
    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
 }
 
-.nav-text {
+.nav-link-text {
   display: none;
   margin-left: 10px;
   transition: all 0.5s;
@@ -105,12 +107,14 @@ body::-webkit-scrollbar-thumb {
   color: rgba(218, 197, 83, 0.98);
 }
 
-#navbar:hover .nav-text {
+#navbar:hover .nav-link-text {
   display: block;
 }
 
 section{
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -121,12 +125,11 @@ section{
 #container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 5rem;
+  padding: 10px;
   width: auto;
   max-width: 940px;
-  align-self: center;
-  margin-left: 25vw;
-  margin-right: 25vw;
-  justify-content: center;
 }
 
 
@@ -135,8 +138,7 @@ section{
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-left: 20px;
   margin-bottom: 10px;
@@ -154,7 +156,7 @@ section{
 
 @media (max-width: 600px) {
 
-  #navbar:hover .nav-text, .nav-text, .nav-list:first-child {
+  #navbar:hover .nav-link-text, .nav-link-text, .nav-list:first-child {
     display: none;
   }
 
@@ -187,7 +189,7 @@ section{
 
   #container {
     margin: 2rem 0 6rem 0;
-    justify-content: center;
+    
   }
 
   .notebook {
