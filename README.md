@@ -1,1 +1,1 @@
-Basic UI app layout using flexbox and medi queries. 
+Basic UI app layout using flexbox and media queries. 
